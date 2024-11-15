@@ -1,0 +1,180 @@
+/* Main Section */
+.product-management {
+    width: 85%;
+    max-width: 1200px;
+    margin: 30px auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f5f8fa; /* Light gray background */
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-management:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Header Styles */
+h2, h3 {
+    color: #34495e; /* Dark gray */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+/* Form Area */
+.product-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Input Fields */
+.product-form input,
+.product-form select {
+    padding: 12px;
+    border: 1px solid #ced6e0; /* Light gray border */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2f3542; /* Dark gray text */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Green Border for Name and Description Fields */
+.product-form input[name="name"],
+.product-form input[name="description"] {
+    border-color: #1e838a; /* Green border for these fields */
+}
+
+.product-form input:focus,
+.product-form select:focus {
+    border-color: #34495e; /* Darker gray border on focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(52, 73, 94, 0.2);
+}
+
+/* Add Product Button */
+.product-form button.add-product {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #27ae60; /* Green background for Add Product */
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.product-form button.add-product:hover {
+    background-color: #e306a4; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Product Table */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-table th,
+.product-table td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-table th {
+    background-color:  #de081a; /* Blue background for header */
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.product-table td {
+    background-color: #ffffff;
+}
+
+.product-table tbody tr:hover {
+    background-color: #f2f6fa; /* Light gray hover effect */
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 70px; /* Space between buttons */
+    margin-right: 10px;
+    justify-content: flex-end;
+}
+
+.button-container .edit-button {
+    background-color: #22ef77; /* Green for edit button */
+    color: #fff;
+}
+
+.button-container .delete-button {
+    background-color: #e74c3c; /* Red for delete button */
+    color: #fff;
+}
+
+.button-container button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+    .product-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-form button {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .product-form input,
+    .product-form button {
+        font-size: 0.9rem;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    h2, h3 {
+        font-size: 1.3rem;
+    }
+
+    .product-form input,
+    .product-form button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,104 @@
+#dashboard {
+    max-width: 1200px;
+    margin: 60px auto 20px; /* Increased top margin to accommodate fixed navbar */
+    padding: 15px;
+    background: rgba(240, 240, 240, 0.9); /* Light grey background */
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Make sure the content stacks */
+    gap: 20px;
+}
+
+#stockOverview {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Arrange the images and chart side by side */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between the images and chart */
+    align-items: center; /* Align content to the center vertically */
+}
+
+.rotating-images {
+    flex: 1; /* Allow the images to take up equal space */
+    max-width: 150px; /* Limit the size of the images */
+    text-align: left; /* Align the images to the left */
+    height: auto;
+    display: flex;
+    justify-content: flex-start; /* Align images to the left */
+}
+
+.rotating-image {
+    width: 150px; /* Set the fixed width */
+    height: 150px; /* Set the fixed height */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px 0; /* Optional: Add space between the images */
+}
+
+.chart-container {
+    flex: 2; /* Increase the flex value to give the chart more space */
+    max-height: 500px; /* Increased height for the graph */
+    overflow: hidden;
+    padding: 10px;
+}
+
+#stockOverview h2 {
+    text-align: center;
+    color: #1a2d3b; /* Dark blue */
+}
+
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.stock-table th, .stock-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 1px solid rgba(220, 220, 220, 0.7);
+}
+
+.stock-table th {
+    background: #ff6347; /* Tomato color */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.stock-table td {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.stock-table tbody tr:nth-child(even) {
+    background: rgba(245, 245, 245, 0.8); /* Lighter alternate row color */
+}
+
+.stock-table tbody tr:hover {
+    background: rgba(255, 224, 195, 0.8); /* Soft peach on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #dashboard {
+        padding: 15px;
+    }
+    #stockOverview {
+        flex-direction: column; /* Stack the items vertically on smaller screens */
+    }
+    .rotating-image {
+        width: 100%; /* Make the images full-width on smaller screens */
+    }
+    .stock-table th, .stock-table td {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,239 @@
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #fe0e86;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1 rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust based on your navbar height */
+    background-color: #333; /* Example background */
+    z-index: 1000; /* Keep navbar on top of other content */
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
+}
+nav {
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
+    gap: 20px; /* Adjust as needed for spacing between buttons */
+    width: 100%; /* Ensures buttons span across */
+}
+nav button {
+    background-color: #222831;
+    color: #fff;
+    border: 1px solid #393e46;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, box-shadow 0.2s ease;
+}
+
+nav button:hover {
+    background-color: #db0669;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav button.active {
+    background-color: #b5008e;
+    color: #fff;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    transition: max-width 0.3s ease;
+}
+
+/* Login Section Styling */
+/* Login Form Container */
+#login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 230px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#login:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styling */
+#login h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields */
+#login input[type="text"], 
+#login input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #34495e;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login input[type="text"]:focus, 
+#login input[type="password"]:focus {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+/* Submit Button */
+#login button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f10d6c, #1c34e5); /* Blue to green gradient */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#login button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #ee0667, #c7ea02); /* Gradient reversed */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Vertical Spacing */
+#login > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #login {
+        padding: 25px;
+    }
+
+    #login h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+
+input {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #00adb5;
+    box-shadow: 0 0 8px rgba(0, 173, 181, 0.3);
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 14px;
+    background-color: #e1115e;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #05eb6d ;
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav button {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    #login h2 {
+        font-size: 1.6rem;
+    }
+
+    input, button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+
